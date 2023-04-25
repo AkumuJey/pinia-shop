@@ -13,8 +13,9 @@ const updateValue = (value) => {
 <template>
   <span>
     <button
+    :disabled="modelValue === 0"
       class="cursor-pointer bg-gray-200 px-2 rounded-l"
-      @click="updateValue(modelValue > 0 ? modelValue - 1 : null)"
+      @click="updateValue( modelValue - 1 )"
     >
       -
     </button>
